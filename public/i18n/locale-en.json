@@ -1,0 +1,39 @@
+{
+  "HOME": {
+    "TITLE": "How do Parlimentarians affect the law?",
+    "SUBTITLE": "Explore the evolution of the law over parliamentary procedure with the Factory Act",
+    "EXPLORE_LEGISLATION": "Explore more than 290 pieces of legislation",
+    "EXPLORE_LEGISLATION_OUT_OF": "out of 415 enacted since 2010",
+    "RECENT_DEBATES": "Recent debates",
+    "EXPLORE_MOST_AMENDED": "Most amended legislation",
+    "EXPLORE_RECENT_LEGISLATION": "View recent debates",
+    "EXPLORE_MOST_AMENDED_LEGISLATION": "View most amended legislation",
+    "NUM_AMENDMENTS": "{{number}} amendments",
+    "EXAMPLE": {
+      "TIMELINE": {
+        "TITLE": "See the timeline of parliamentary bus",
+        "DESCRIPTION": "All legislation is compared over time or in their organization. Sorting and filters by the number of amendments, topics or dates of study."
+      },
+      "CHANGES": {
+        "TITLE": "Dive into the amendments voted on by the Parliament",
+        "DESCRIPTION": "At each step of the procedure, each item constituting the legislation is shown with amendments made by the Parliament. Additions and deletions made in the legislation are available in detail as well as the full text of the legislation."
+      },
+      "COMPARE": {
+        "TITLE": "Compare amendments",
+        "DESCRIPTION": "The amendments are available at each stage so you can quickly identify the political groups of the authors who adopted or denied help, and those that have not been discussed."
+      },
+      "INTERVENTIONS": {
+        "TITLE": "Explore interventions",
+        "DESCRIPTION": "The flow of interventions by the parliamentary group is shown at each stage of the discussion. Links to <a href='http://nosdeputes.fr/'>NosDéputés.fr</a> and <a href='http://nossenateurs.fr/'>NosSénateurs.fr</a> let you read the debates associated with each stage of the discussion."
+      }
+    }
+  },
+  "CATEGORIES": {
+    "ECONOMIC": "Economy",
+    "GEOLOCATION": "Geolocation",
+    "COUNTERFEIT": "Counterfeit",
+    "SAME_SEX_MARRIAGE": "Same sex marriage",
+    "LOCAL_COUNCILS": "Local councils",
+    "ELECTIONS": "Elections and changes to the electoral calendar"
+  }
+}
