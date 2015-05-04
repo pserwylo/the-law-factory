@@ -21,8 +21,7 @@ angular.module('theLawFactory.controllers', ['theLawFactory.config']).
         $rootScope.$broadcast('MAIN_CTRL_START_TUTORIAL');
       };
     }).
-    controller('mainCtrl', function ($scope, $http, apiService, api, $rootScope, $location, API_ROOT_URL) {
-
+    controller('mainCtrl', function ($scope, $http, apiService, api, $rootScope, $location, API_ROOT_URL, $translate) {
         $(".introjs-helperLayer").remove();
         $(".introjs-overlay").remove();
         $rootScope.APIRootUrl = API_ROOT_URL;
@@ -158,7 +157,7 @@ angular.module('theLawFactory.controllers', ['theLawFactory.config']).
             "hemicycle": "Hém.",
             "depot": "Dépôt",
             "depots": "Dépôts",
-            "cmp": "CMP",
+            "cmp": "CMP"
         }
 
         $scope.longNames = {
@@ -179,7 +178,10 @@ angular.module('theLawFactory.controllers', ['theLawFactory.config']).
         }
 
         $scope.vizTitle = ""
-        $scope.helpText = '<div id="help-msg"><p>VIZTEXT</p><p>Cliquez sur le bouton <span class="question_mark">?</span> ci-dessus pour voir un tutoriel interactif de cette visualisation.<p></div>';
+        $scope.helpText = '<div id="help-msg"><p>VIZTEXT</p><p>LAWS.TUTORIAL.BUTTON_HELP</p></div>';
+        $translate('LAWS.TUTORIAL.BUTTON_HELP').then(function(value) {
+          $scope.helpText = $scope.helpText.replace("LAWS.TUTORIAL.BUTTON_HELP", value);
+        });
         $scope.setHelpText = function(t) {
             $scope.helpText = $scope.helpText.replace("VIZTEXT", t);
         }
@@ -434,7 +436,7 @@ angular.module('theLawFactory.controllers', ['theLawFactory.config']).
                         nextLabel:  "suite...",
                         prevLabel:  "...retour",
                         skipLabel:  "quitter ce tutoriel",
-                        doneLabel:  "quitter ce tutoriel",
+                        doneLabel:  "quitter ce tutoriel"
                     });
                     introjs.onbeforechange(function(e) {
                         if ($(e).hasClass('div-over-svg')) 

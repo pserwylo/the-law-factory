@@ -35,8 +35,8 @@ var accentMap = {
 
 /* Directives */
 
-angular.module('theLawFactory.directives', []).directive('mod1', ['api', '$rootScope', '$location', '$compile',
-function(api, $rootScope, $location, $compile) {
+angular.module('theLawFactory.directives', []).directive('mod1', ['api', '$rootScope', '$location', '$compile', '$translate',
+function(api, $rootScope, $location, $compile, $translate) {
     return {
         restrict : 'A',
         replace : false,
@@ -140,22 +140,30 @@ function(api, $rootScope, $location, $compile) {
         }
     };
 }])
-.directive('mod0', ['api', '$rootScope', '$location', '$compile',
-function(api, $rootScope, $location, $compile) {
+.directive('mod0', ['api', '$rootScope', '$location', '$compile', '$translate',
+function(api, $rootScope, $location, $compile, $translate) {
     return {
         restrict : 'A',
         replace : false,
         templateUrl : 'templates/mod0.html',
         controller : function($scope, $element, $attrs) {
             $scope.mod="mod0";
-            $scope.setHelpText("Chaque ligne représente la chronologie des débats sur un projet ou une proposition de loi. La couleur indique l'institution en charge du texte à un instant donné (Assemblée en bleu, Sénat en rouge...). Cliquez sur un texte pour en consulter le résumé et en explorer les articles.");
-            $scope.vizTitle = "NAVETTES";
+            $translate('LAWS.HELP_TEXT').then(function(value) {
+              $scope.setHelpText(value);
+            });
+            $translate('LAWS.SHUTTLE').then(function(value) {
+              $scope.vizTitle = value;
+            });
         },
         link : function postLink(scope, element, attrs) {
 
             $rootScope.pageTitle = "";
 
-            $(".title").html('<h4 class="law-title">Explorer les textes promulgués depuis 2010</h4>');
+            var title = $(".title");
+            title.html('<h4 class="law-title"></h4>');
+            $translate('LAWS.EXPLORE_ENACTED_SINCE').then(function(value) {
+                title.find('.law-title').html(value);
+            });
             $("#mod0-slider").slider({
                 min:1,
                 max:10,
@@ -164,7 +172,7 @@ function(api, $rootScope, $location, $compile) {
                 slide: function( event, ui ) {
                     zooming(ui.value);
                 }
-            })
+            });
             var mod0 = thelawfactory.mod0();
 
             function update() {

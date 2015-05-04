@@ -5,9 +5,9 @@
       <ul id="menu-left" class="nav navbar-nav">
 	<li id="backtoall" onclick="drawGantt('reset')" class="active viewonelaw" style="display: none;"><a>&lt; Tous les textes</a></li>
     <li id="menu-display" class="dropdown">
-      <span id="display_value" class="dropdown-toggle" data-toggle="dropdown"><span id="display_content">Vue <span class="selectedchoice">chronologique</span> <b class="caret"></b></span></span>
+        <span id="display_value" class="dropdown-toggle" data-toggle="dropdown"><span id="display_content">Vue <span class="selectedchoice">chronologique</span> <b class="caret"></b></span></span>
       <ul class="dropdown-menu" id="display_menu">
-        <li><a id="dm-time" class="chosen" onclick="drawGantt('time')">chronologique</a></li>
+        <li><a id="dm-time" class="chosen" onclick="drawGantt('time')" translate>chronologique</a></li>
         <li><a id="dm-absolute" onclick="drawGantt('absolute')">comparative</a></li>
         <li><a id="dm-quanti" onclick="drawGantt('quanti')">quantitative</a></li>
       </ul>
@@ -58,14 +58,14 @@
       </div>
 
       <div class="labels-sc">
-        <h5>Filtrer par durée d'adoption des textes</h5>
+        <h5 translate>LAWS.FILTERS.TIME</h5>
         <div id="bars"></div>
       </div>
 
     </div>
 
     <div id="sidebar" class="text">
-      <h4 id="text-title" data-placement="top" data-toggle="tooltip">NAVETTES</h4>
+      <h4 id="text-title" data-placement="top" data-toggle="tooltip" translate>LAWS.SHUTTLE</h4>
       <div class="text-container"></div>
     </div>
 

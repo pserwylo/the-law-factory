@@ -42,6 +42,9 @@ reset_filters();
 
 (function () {
 
+    var injector = angular.element($('#view-wrapper')).injector();
+    var $translate = injector.get('$translate');
+
     var thelawfactory = window.thelawfactory || (window.thelawfactory = {});
 
     thelawfactory.mod0 = function () {
@@ -888,13 +891,17 @@ reset_filters();
 
                 function drawStats() {
 
-                    $(".labels-sc h5").html(
-                        active_filters['length'] ?
-                            "Supprimer le filtre sur les textes de "+(active_filters['length']/30 + " mois").replace("24 mois", "2 ans et +") :
-                            "Filtrer par durée d'adoption des textes"
-                    );
+                    $translate('LAW.FILTERS.TIME').then(function(value) {
 
-                    var margin_top = 10,
+                      $(".labels-sc h5").html(
+                          active_filters['length'] ?
+                              "Supprimer le filtre sur les textes de "+(active_filters['length']/30 + " mois").replace("24 mois", "2 ans et +") :
+                              value
+                      );
+
+                    });
+
+                  var margin_top = 10,
                         text_height = 35,
                         height = $(".labels-sc").height() - parseInt($(".labels-sc h5").css("height")) - margin_top,
                         barcontainer = d3.select("#bars"),

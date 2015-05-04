@@ -1,6 +1,6 @@
 {
   "HOME": {
-    "TITLE": "How do Parlimentarians affect the law?",
+    "TITLE": "How does Parliament shape the law?",
     "SUBTITLE": "Explore the evolution of the law over parliamentary procedure with the Factory Act",
     "EXPLORE_LEGISLATION": "Explore more than 290 pieces of legislation",
     "EXPLORE_LEGISLATION_OUT_OF": "out of 415 enacted since 2010",
@@ -28,6 +28,21 @@
       }
     }
   },
+
+  "LAWS" : {
+    "EXPLORE_ENACTED_SINCE" : "Explore laws enacted since 2010",
+    "SHUTTLE": "SHUTTLE",
+    "HELP_TEXT": "Each line represents the timing of debates on a project or a bill. The color indicates the institution in charge of the text at a given time (Assembly in blue, Senate in red). Click on a word to see the summary and explore articles.",
+    "TUTORIAL" : {
+      "BUTTON_HELP": "Click the <span class='question_mark'>?</span> button above to see an interactive tutorial for this visualization."
+    },
+    "FILTERS" : {
+      "TIME": "Filter by time of adoption of texts",
+      "CHRONOLOGICAL_ORDER" : "<span class='selectedchoice'>Chronological<span> order",
+      "CHRONOLOGICAL" : "Chronological"
+    }
+  },
+
   "CATEGORIES": {
     "ECONOMIC": "Economy",
     "GEOLOCATION": "Geolocation",
@@ -36,4 +51,5 @@
     "LOCAL_COUNCILS": "Local councils",
     "ELECTIONS": "Elections and changes to the electoral calendar"
   }
+
 }

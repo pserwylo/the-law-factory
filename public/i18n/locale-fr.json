@@ -28,6 +28,21 @@
       }
     }
   },
+
+  "LAWS" : {
+    "EXPLORE_ENACTED_SINCE": "Explorer les textes promulgués depuis 2010",
+    "SHUTTLE": "NAVETTES",
+    "HELP_TEXT": "Chaque ligne représente la chronologie des débats sur un projet ou une proposition de loi. La couleur indique l'institution en charge du texte à un instant donné (Assemblée en bleu, Sénat en rouge...). Cliquez sur un texte pour en consulter le résumé et en explorer les articles.",
+    "TUTORIAL" : {
+      "BUTTON_HELP": "Cliquez sur le bouton <span class='question_mark'>?</span> ci-dessus pour voir un tutoriel interactif de cette visualisation.",
+    },
+    "FILTERS" : {
+      "TIME": "Filtrer par durée d'adoption des textes",
+      "CHRONOLOGICAL_ORDER" : "Vue <span class='selectedchoice'>chronologique</span>",
+      "CHRONOLOGICAL" : "Chronologique"
+    }
+  },
+
   "CATEGORIES": {
     "_TODO": "Are these official names of legislation, or general broad cateegories of legislation? The answer will determine how they are translated I guess.",
     "ECONOMIC": "Économie réelle",
